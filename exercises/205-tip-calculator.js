@@ -9,8 +9,18 @@
 // Examples:
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
+function tipAmount (total, service) {
 
+    let service = ['good', 'fair', 'poor']
 
+    if (service == [0]) {
+        return total * (1 + (20 / 100))
+    } else if (service == [1]) {
+        return total * (1 + (15 / 100))
+    } else if (service == [2]) {
+        return total * (1 + (10 / 100))
+    }
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "totalAmount" that takes the same arguments as "tipAmount"
@@ -20,9 +30,21 @@
 // Examples:
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
+function totalAmount (total, service) {
 
+    let service = ['good', 'fair', 'poor']
+    const tipAmount = total + service
 
-
+    if (service == [0]) {
+        return total * (1 + (20 / 100))
+    } else if (service == [1]) {
+        return total * (1 + (15 / 100))
+    } else if (service == [2]) {
+        return total * (1 + (10 / 100))
+    }
+    return tipAmount
+}
+// comment here to test github
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "splitAmount" that takes a bill amount, the level of service,
 // and the number of people to split the bill between. It should return the final
