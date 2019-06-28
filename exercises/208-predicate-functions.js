@@ -21,10 +21,15 @@
 // isVowel(99) --> false
 // isVowel({e: 'Elephant'}) --> false
 function isVowel (char) {
-    
+    let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+    if (vowels.includes(char)) {
+        return true
+    } else {
+        return false
+    }
 }
-
-
+// STRING SHOULD NOT === TO AN ARRAY
+// input that lowercases any input (toLowerCase)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write two functions: "isEven" and "isOdd" that take a number argument and
 // return true or false if the number is even or odd, respectively.
@@ -38,8 +43,14 @@ function isVowel (char) {
 // isOdd(5) --> true
 // isOdd('7') --> false
 // isOdd(3.14) --> false
+function isEven (number) {
+    if (number % 2 === 0) {
+        
+    }
+}
+function isOdd (number) {
 
-
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "isCapitalCity" that takes two arguments: a US state and a city name
