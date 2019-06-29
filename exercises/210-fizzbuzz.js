@@ -9,3 +9,14 @@
 // Examples:
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
+function fizzbuzz (number) {
+    if (number / 5 !== 0 || number / 3 !== 0) {
+        return console.log(".")
+    } else if (number / 5 !== 0 && number / 3 === 0) {
+        return console.log("fizz")
+    } else if (number / 5 === 0 && number / 3 !== 0) {
+        return console.log("buzz")
+    } else if (number / 5 === 0 && number / 3 === 0) {
+        return console.log("fizzbuzz")
+    } 
+}
