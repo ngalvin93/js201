@@ -44,20 +44,20 @@ function isVowel (char) {
 // isOdd('7') --> false
 // isOdd(3.14) --> false
 function isEven (number) {
-    if (number % 2 === 0) {
-        return true
+    if (typeof number !== 'number') {
+        return false
+    } else if (number % 2 === 0) {
+    return true
     } else if (number % 2 !== 0) {
-    return false
-    } else if (typeof number !== 'number') {
         return false
     }
 }
 function isOdd (number) {
-    if (number % 2 !== 0) {
-        return true
+    if (typeof number !== 'number') {
+        return false
+    } else if (number % 2 !== 0) {
+    return true
     } else if (number % 2 === 0) {
-    return false
-    } else if (typeof number !== 'number') {
         return false
     }
 }
@@ -77,6 +77,7 @@ function isOdd (number) {
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
 function isCapitalCity (state, city) {
+
     let capitals = {
         Alabama: 'Montgomery',
         Montana: 'Helena',
@@ -129,4 +130,5 @@ function isCapitalCity (state, city) {
         Missouri: 'Jefferson City',    
         Wyoming: 'Cheyenne'
     };
+        return capitals.hasOwnProperty(state)
 }
