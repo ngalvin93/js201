@@ -20,3 +20,4 @@ function fizzbuzz (number) {
         return console.log("fizzbuzz")
     } 
 }
+// accumilation!
