@@ -20,14 +20,37 @@
 // isVowel('A') --> true
 // isVowel(99) --> false
 // isVowel({e: 'Elephant'}) --> false
+// function isVowel (char) {
+//     const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+//     if (vowels.includes(char)) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+//class example
 function isVowel (char) {
-    let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-    if (vowels.includes(char)) {
-        return true
-    } else {
-        return false
-    }
+    if (typeof char !== 'string') return false
+    if (char.length !== 1) return false
+
+    const vowels = ["a", "e", "i", "o", "u"]
+    const lowerCase = char.toLowerCase()
+    return vowels.includes(lowerCase) // or return vowels.includes(char.toLowerCase())
 }
+// another example
+// function isVowel (char) {
+//     if (typeof char !== 'string') return false
+//     if (char.length !== 1) return false
+//     return 'aeiou'.indexOf(char.toLowerCase()) !== -1
+// }
+
+// the ideal way to write the code
+function isVowel (char) {
+    return typeof char === 'string' &&
+    char.length === 1 &&
+    'aeiou'.includes(char.toLowerCase())
+}
+
 // STRING SHOULD NOT === TO AN ARRAY
 // input that lowercases any input (toLowerCase)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,7 +66,7 @@ function isVowel (char) {
 // isOdd(5) --> true
 // isOdd('7') --> false
 // isOdd(3.14) --> false
-function isEven (number) {
+/* function isEven (number) {
     if (typeof number !== 'number') {
         return false
     } else if (number % 2 === 0) {
@@ -61,7 +84,24 @@ function isOdd (number) {
         return false
     }
 }
-
+*/
+// class example
+/*
+function isOdd (n) {
+    if (typeof n !== 'number') return false
+    if ( n % 2 === 0) return true
+    else return false
+}
+*/
+// class example
+function isOdd (n) {
+    return typeof n === 'number' &&
+    (n % 2 === 1 || n % 2 === -1)
+}
+function isEven (n) {
+    return typeof n === 'number' &&
+    (n % 2 === 0 || n % 2 === -1)
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "isCapitalCity" that takes two arguments: a US state and a city name
 // and returns true or false if the city name is the capital of the state.
@@ -77,8 +117,7 @@ function isOdd (number) {
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
 function isCapitalCity (state, city) {
-
-    let capitals = {
+const capital = {
         Alabama: 'Montgomery',
         Montana: 'Helena',
         Alaska:    'Juneau',    
@@ -129,6 +168,10 @@ function isCapitalCity (state, city) {
         Wisconsin: 'Madison',
         Missouri: 'Jefferson City',    
         Wyoming: 'Cheyenne'
-    };
-        return capitals.hasOwnProperty(state)
+    }
+    if (capital.hasOwnProperty(state) === true && capital[state] === city) {
+        return true
+    } else {
+        return false
+    }
 }
