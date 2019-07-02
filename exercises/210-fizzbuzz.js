@@ -10,6 +10,13 @@
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
 function fizzbuzz (number) {
+
+    let capNumber = number;
+    let arrOut = [];
+        for (let range = 1; range <= capNumber; range++) {
+            return arrOut.push()
+        }
+
     if (number / 5 !== 0 || number / 3 !== 0) {
         return console.log(".")
     } else if (number / 5 !== 0 && number / 3 === 0) {
