@@ -11,20 +11,21 @@
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
 function fizzbuzz (number) {
 
-    let capNumber = number;
-    let arrOut = [];
-        for (let range = 1; range <= capNumber; range++) {
-            return arrOut.push()
-        }
-
-    if (number / 5 !== 0 || number / 3 !== 0) {
-        return console.log(".")
-    } else if (number / 5 !== 0 && number / 3 === 0) {
-        return console.log("fizz")
-    } else if (number / 5 === 0 && number / 3 !== 0) {
-        return console.log("buzz")
-    } else if (number / 5 === 0 && number / 3 === 0) {
-        return console.log("fizzbuzz")
+let arrOut = []
+for (let i = 1; i <= number; i++) {
+    arrOut.push(i)
+}
+function checkThings (arrOut) {
+    if (arrOut / 5 !== 0 || arrOut / 3 !== 0) {
+        return "."
+    } else if (arrOut / 5 !== 0 && arrOut / 3 === 0) {
+         return "fizz"
+    } else if (arrOut / 5 === 0 && arrOut / 3 !== 0) {
+        return "buzz"
+    } else if (arrOut / 5 === 0 && arrOut / 3 === 0) {
+        return "fizzbuzz"
     } 
+}
+return checkThings()
 }
 // accumilation!
