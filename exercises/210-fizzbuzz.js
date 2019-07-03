@@ -10,22 +10,21 @@
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
 function fizzbuzz (number) {
-
-let arrOut = []
+let oldArray = []
 for (let i = 1; i <= number; i++) {
-    arrOut.push(i)
+    oldArray.push(i)
 }
-function checkThings (arrOut) {
-    if (arrOut / 5 !== 0 || arrOut / 3 !== 0) {
-        return "."
-    } else if (arrOut / 5 !== 0 && arrOut / 3 === 0) {
-         return "fizz"
-    } else if (arrOut / 5 === 0 && arrOut / 3 !== 0) {
-        return "buzz"
-    } else if (arrOut / 5 === 0 && arrOut / 3 === 0) {
+function checkMultiple (number) {
+    if (number % 5 === 0 && number % 3 === 0) {
         return "fizzbuzz"
+    } else if (number % 5 !== 0 && number % 3 === 0) {
+         return "fizz"
+    } else if (number % 5 === 0 && number % 3 !== 0) {
+        return "buzz"
+    } else if (number % 5 !== 0 && number % 3 !== 0) {
+        return "."
     } 
 }
-return checkThings()
+let newArray = oldArray.map(checkMultiple)
+return newArray.join('')
 }
-// accumilation!
