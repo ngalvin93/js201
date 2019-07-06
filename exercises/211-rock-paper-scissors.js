@@ -7,19 +7,22 @@
 // rockPaperScissors('rock', 'paper') --> 'player 2'
 // rockPaperScissors('paper', 'paper') --> 'draw'
 function rockPaperScissors (throwOne, throwTwo) {
-let itemOne = {
-    r: 'rock',
-    p: 'paper',
-    s: 'scissor'
-}
-let itemTwo = {
-    r: 'rock',
-    p: 'paper',
-    s: 'scissor'
-}
-if (throwOne === itemOne) {
+    const rock = 'rock'
+    const paper = 'paper'
+    const scissors = 'scissors'
+if (throwOne === throwTwo) {
     return 'draw'
-} else if (throwOne === throwOne.r && throwTwo === throwTwo.p || throwTwo.s) {
+} else if (throwOne === rock && throwTwo === scissors) {
     return 'player 1'
+} else if (throwOne === paper && throwTwo === rock) {
+    return 'player 1'
+} else if (throwOne === scissors && throwTwo === paper) {
+    return 'player 1'
+} else if (throwOne === rock && throwTwo === paper) {
+    return 'player 2'
+} else if (throwOne === paper && throwTwo === scissors) {
+    return 'player 2'
+}  else if (throwOne === scissors && throwTwo === rock) {
+    return 'player 2'
 }
 }
