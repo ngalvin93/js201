@@ -1,16 +1,23 @@
 // Write a function "max" that takes an array of numbers returns the highest
 // number in the array.
-
-
-
+function max (arrayOfNumbers) {
+    if (arrayOfNumbers.length === 0) {
+      return 0
+    } else {
+      let newArrayOfNumbers = arrayOfNumbers.sort((a,b) => a-b)
+      let lastNumber = newArrayOfNumbers.pop() 
+      return lastNumber
+    }
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "sumNumbers" which is given an array of numbers and returns
 // the sum of the numbers.
 // Example:
 // sumNumbers([1, 4, 8]) --> 13
-
-
-
+function sumNumbers (arrayOfNumbers) {
+    return arrayOfNumbers.reduce((accumulator, currentValue) => accumulator + currentValue,
+    0)
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "positives" which is given an array of numbers and
 // returns a new array containing only the positive numbers within the given array.
@@ -18,7 +25,9 @@
 // positives([1, -3, 5, -3, 0]) --> [1, 5]
 // positives([1, 2, 3]) --> [1, 2, 3]
 // positives([-1, -2, -3]) --> []
+function positives (arrayOfNumbers) {
 
+}
 
 
 

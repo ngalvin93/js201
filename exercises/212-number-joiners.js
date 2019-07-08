@@ -4,15 +4,24 @@
 // Examples:
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
-
-
-
+function numberJoinerWhile (start, end) {
+    let Arr = [];
+    while (start <= end) {
+        Arr.push(start);
+        start++;
+}
+return Arr.join('_')
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
 // except using a "for" loop internally.
-
-
-
+function numberJoinerFor (start, end) {
+let Arr = [];
+for (let i=start; i<=end; i++) {
+    Arr.push(i);
+}
+return Arr.join('_')
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFancy" which does the same thing as "numberJoinerWhile",
 // except it takes an optional third argument specifying the separator between the numbers.
@@ -21,3 +30,11 @@
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+function numberJoinerFancy (start, end, joiner = '_') {
+let Arr = [];
+while (start<=end) {
+    Arr.push(start);
+    start++;
+}
+return Arr.join(joiner)
+}
