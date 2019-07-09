@@ -79,5 +79,5 @@ function capitalizeAll (sentence) {
 // split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
 // split('xyz', 'r') --> ['xyz']
 function split () {
-
+    
 }
