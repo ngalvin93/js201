@@ -78,6 +78,24 @@ function capitalizeAll (sentence) {
 // split('a-b-c', '-') --> ['a', 'b', 'c']
 // split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
 // split('xyz', 'r') --> ['xyz']
-function split () {
-    
+
+//  Different methods of approach:
+//      - EX1: looping (for) through using charAt() and substr()
+//      - EX2: regular expressions (RegEx) to find and replace
+//      - EX3: while loop with index of delimitter on the string
+
+//  EX1
+function split (string, delimiter) {
+    let results = []
+    let delimiterLength = delimeter.length
+    for (var index=0; index < string.length; index++) {
+        let characters = string.substr(index, delimeterLength)
+        // let chunkStart =
+        // let chunkEnd
+        //console.log(characters, index)
+        if (characters === delimiter) {
+            //console.log(string.substr(0,index))
+        }
+    }
+    return results
 }
