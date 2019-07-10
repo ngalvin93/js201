@@ -99,3 +99,24 @@ function split (string, delimiter) {
     }
     return results
 }
+
+//  Working example from StackOverflow
+// function CustomSplit(str, delimiter, removeEmptyItems) {
+//     if (!delimiter || delimiter.length === 0) return [str];
+//     if (!str || str.length === 0) return [];
+//     var result = [];
+//     var j = 0;
+//     var lastStart = 0;
+//     for (var i=0;i<=str.length;) {
+//       if (i == str.length || str.substr(i,delimiter.length) == delimiter)
+//       {
+//         if (!removeEmptyItems || lastStart != i)
+//         {
+//             result[j++] = str.substr(lastStart, i-lastStart);
+//         }
+//         lastStart = i+delimiter.length;
+//         i += delimiter.length;    
+//       } else i++;
+//     }
+//     return result;
+//   }
