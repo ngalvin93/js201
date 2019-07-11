@@ -86,10 +86,10 @@ function capitalizeAll (sentence) {
 
 //  EX1
 function split (string, delimiter) {
-    let results = []
-    let delimiterLength = delimeter.length
+    let results = [];
+    let delimiterLength = delimeter.length;
     for (var index=0; index < string.length; index++) {
-        let characters = string.substr(index, delimeterLength)
+        let characters = string.substr(index, delimeterLength);
         // let chunkStart =
         // let chunkEnd
         //console.log(characters, index)
