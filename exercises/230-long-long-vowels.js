@@ -10,4 +10,19 @@
 // 'Man'
 function longLongVowels (string) {
 
-}
+    const vowels = ['a','e','i','o','u'];
+    let stringLetterArray = string.split('')
+    let returnArr = [];
+    
+    for (i=0; i<string.length; i++) {
+    if (stringLetterArray.charAt(i) == "a" || stringLetterArray.charAt(i) == "e" || stringLetterArray.charAt(i) == "i" || stringLetterArray.charAt(i) == "o" || stringLetterArray.charAt(i) == "u") {
+      returnArr.push(stringLetterArray.charAt(i))
+    }
+
+    }
+    
+    return returnArr
+    
+    }
+    
+    longLongVowels ('Hello from the other side')
