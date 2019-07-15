@@ -8,7 +8,12 @@
 // > cipher('We hold these truths to be self-evident', 8)
 // 'em pwtl bpmam bzcbpa bw jm amtn-mdqlmvb
 function cipher (string, shift) {
-
+    const alpha = 'abcdefghijklmnopqrstuwxyz';
+    let result = '';
+    for (i=0; i<string.length; i++) {
+        result += string.charAt(i+shift)
+    }
+    return result
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
