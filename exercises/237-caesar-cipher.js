@@ -6,9 +6,10 @@
 // > cipher('Genius without education is like silver in the mine', 5)
 // 'ljsnzx bnymtzy jizhfynts nx qnpj xnqajw ns ymj rnsj'
 // > cipher('We hold these truths to be self-evident', 8)
-// 'em pwtl bpmam bzcbpa bw jm amtn-mdqlmvb'
-
-
+// 'em pwtl bpmam bzcbpa bw jm amtn-mdqlmvb
+function cipher (string, shift) {
+    
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "decipher" which is given a string, a shift, and returns the
