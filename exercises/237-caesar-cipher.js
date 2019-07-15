@@ -8,7 +8,7 @@
 // > cipher('We hold these truths to be self-evident', 8)
 // 'em pwtl bpmam bzcbpa bw jm amtn-mdqlmvb
 function cipher (string, shift) {
-    
+
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -20,3 +20,6 @@ function cipher (string, shift) {
 // 'attack at dawn!'
 // > decipher('ehz czlod otgpcrpo ty l hzzo', 11)
 // 'two roads diverged in a wood'
+function decipher (string, shift) {
+    
+}
