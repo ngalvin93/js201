@@ -7,15 +7,23 @@
 // 'ljsnzx bnymtzy jizhfynts nx qnpj xnqajw ns ymj rnsj'
 // > cipher('We hold these truths to be self-evident', 8)
 // 'em pwtl bpmam bzcbpa bw jm amtn-mdqlmvb
-function cipher (string, shift) {
-    const alpha = 'abcdefghijklmnopqrstuwxyz';
-    let result = '';
-    for (i=0; i<string.length; i++) {
-        result += string.charAt(i+shift)
+function cipher (str, shift) {
+    let alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    let splitStr = str.toLowerCase().split('');
+    let returnArr = [];
+    for (let i=0;i<splitStr.length;i++) {
+      if (alpha.indexOf(splitStr[i])===-1) {
+        returnArr.push(splitStr[i])
+      } else {
+        for (let j=0;j<alpha.length;j++) {
+          if (splitStr[i]===alpha[j]) {
+            returnArr.push(alpha[(j+shift) % alpha.length])
+          }
+        }
+      }
     }
-    return result
-}
-
+    return returnArr.join('')
+    }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "decipher" which is given a string, a shift, and returns the
 // decoded Caesar cipher message.
