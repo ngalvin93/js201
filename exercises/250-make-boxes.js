@@ -8,10 +8,10 @@
 // *****
 // *****
 
-function makeSquare() {
-    
+function makeSquare (num) {
+    let square = '*'
+    console.log(square.repeat(num))
 }
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBox" which is given a width and height and returns a
 // hollow box of those dimensions.
@@ -21,12 +21,9 @@ function makeSquare() {
 // *    *
 // *    *
 // ******
-
 function makeBox() {
 
 }
-
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBanner" which is given some text and returns a banner
 // with a border surrounding the text. The border should stretch to the length
