@@ -7,10 +7,17 @@
 // *****
 // *****
 // *****
-
 function makeSquare (num) {
-    let square = '*'
-    console.log(square.repeat(num))
+    let star = '*';
+    let final = '';
+    for (i=0;i<num;i++) {
+        if (i<num-1) {
+            final+=star.repeat(num) + '\n'
+        } else {
+            final+=star.repeat(num)
+        }
+    }
+    return final
 }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBox" which is given a width and height and returns a
