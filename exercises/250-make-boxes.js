@@ -28,8 +28,25 @@ function makeSquare (num) {
 // *    *
 // *    *
 // ******
-function makeBox() {
-
+function makeBox (horizontal,vertical) {
+  const star = '*';
+  const space = ' ';
+  let innerRow = ''
+  let firstRow = star.repeat(horizontal)
+  if (vertical > 1) {
+    for (i=1;i<=horizontal;i++) {
+      if (i < 2) {
+        innerRow += star
+      } else if (i <= horizontal-1) {
+        innerRow += space
+      } else {
+        innerRow += star + '\n'
+      }
+    }
+    return firstRow + '\n' + innerRow.repeat(vertical - 2) + firstRow;
+  } else {
+    return firstRow
+  }
 }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBanner" which is given some text and returns a banner
@@ -40,7 +57,11 @@ function makeBox() {
 // ****************************
 // * Welcome to DigitalCrafts *
 // ****************************
-
-function makeBanner() {
-
+function makeBanner (text) {
+  const star = '*';
+  const space = ' ';
+  let length = text.length + 4;
+  let starRow = star.repeat(length);
+  let stringRow = star + space + text + space + star;
+  return starRow + '\n' + stringRow + '\n' + starRow;
 }
