@@ -3,13 +3,12 @@
 // Example:
 // > matrixAdd([[1, 3], [2, 4]], [[5, 2], [1, 0]])
 // [ [ 6, 5 ], [ 3, 4 ] ]
-function matrixAdd (arr1, arr2) {
-    let result = []
-    function sum (arr) {
-        for (let i = 0; i < arr) {
-            
-        }
-    }
+function matrixAdd (a,b) {
+    return a.map(function(row,i){
+        return row.map(function(el,j){
+            return el + b[i][j]
+        })
+    })
 }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "matrixMultiply" which is given two two-dimensional arrays;
