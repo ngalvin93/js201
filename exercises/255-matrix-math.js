@@ -3,9 +3,14 @@
 // Example:
 // > matrixAdd([[1, 3], [2, 4]], [[5, 2], [1, 0]])
 // [ [ 6, 5 ], [ 3, 4 ] ]
-
-
-
+function matrixAdd (arr1, arr2) {
+    let result = []
+    function sum (arr) {
+        for (let i = 0; i < arr) {
+            
+        }
+    }
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "matrixMultiply" which is given two two-dimensional arrays;
 // you can assume the matricies are of size 2x2.
@@ -15,3 +20,6 @@
 // Example:
 // > matrixMultiply([[2, 4], [3, 4]], [[5, 2], [3, 1]])
 // [ [22,  8], [27, 10] ]
+function matrixMultiply () {
+    
+}
