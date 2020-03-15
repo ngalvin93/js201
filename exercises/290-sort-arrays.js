@@ -42,3 +42,6 @@ function strLengthSort (arr) {
 //   [4, 5]
 // ])
 // > [[2], [4, 5], [9, 1, 9]]
+function sumSort (arr) {
+    return arr.sort((a,b) => a.reduce((a,b)=>a+b)-b.reduce((a,b)=>a+b))
+}
