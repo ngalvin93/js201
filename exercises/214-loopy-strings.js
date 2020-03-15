@@ -8,10 +8,7 @@
 // Example:
 // reverse("skoob") --> "books"
 function reverse (word) {
-    let split = word.split("");
-    let reverse = split.reverse();
-    let join = reverse.join("")
-    return join
+    return word.split('').reverse().join('')
 }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "findLongestWord" that takes a string of words and returns
