@@ -8,7 +8,7 @@
 // alphaSort(['b', 'a', 'c'])
 // > ['a', 'b', 'c']
 function alphaSort (arr) {
-    return arr.sort((a,b) => a-b)
+    return arr.sort()
 }
 
 
@@ -20,7 +20,7 @@ function alphaSort (arr) {
 // strLengthSort(['Apple', 'Banana', 'Cherry'])
 // > ['Apple', 'Cherry', 'Banana']
 function strLengthSort (arr) {
-    
+    return arr.sort((a,b) => a.length - b.length)
 }
 
 
