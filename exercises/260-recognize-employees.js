@@ -15,3 +15,15 @@
 // > ['Great job, Susan!', 'Great job, Anthony!', 'Great job, Bill!']
 //
 // Hint: What is the best data structure for the employees of the month list?
+function recognizeEmployees (names, eotm) {
+    const result = names.map((name, idx) => {
+        //console.log(idx, name)
+        if (name === eotm[0] || name === eotm[1]) {
+          return `Outstanding job, ${name}!`
+        } else {
+          return `Great job, ${name}!`
+        }
+      })
+      //console.log(result)
+      return result
+}
